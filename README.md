@@ -1,3 +1,6 @@
+
+Edited by Vlad G
+
 --------------------
 # Kiparis Framework
 
