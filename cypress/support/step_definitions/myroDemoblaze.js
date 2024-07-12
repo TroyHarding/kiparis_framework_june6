@@ -19,7 +19,7 @@ Given("I navigate to the Demoblaze homepage", () => {
 
 
 
-var homePage = new demo_home_PO();
+var homePage = new myrodemoHome_PO();
 
 // When("I click a product {string}", (product) => {
 //   homePage.clickProduct(product);

@@ -1,6 +1,11 @@
 {
-    "baseUrl": "https://www.demoblaze.com/",
-    "username": "billyjoebob",
-    "password": "password1"
+  "baseUrl": "https://www.demoblaze.com/",
+  "username": "billyjoebob",
+  "password": "password1",
+
+  "products": {
+    "s6": "Samsung galaxy s6",
+    "iphone": "Iphone 6 32gb",
+    "nokia": "Nokia lumia 1520"
   }
-  
+}
