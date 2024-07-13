@@ -20,8 +20,8 @@ When(`I click on element with selector {string}`, (selector) => {
 When(
   `I type Username {string} and Password {string} into element with selector {string} and {string}`,
   (Username, Password) => {
-    cy.get("#sign-username").type("testuser");
-    cy.get("#sign-password").type("password567");
+    cy.get("#sign-username").type("madhutest");
+    cy.get("#sign-password").type("xyz123456");
     cy.wait(2 * 1000);
   }
 );

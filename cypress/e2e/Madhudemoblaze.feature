@@ -5,7 +5,7 @@ Feature: Demoblaze site
     Scenario: User Registration
         Given I open url "https://www.demoblaze.com/index.html"
         When I click on element with selector "#signin2"
-        When I type Username "testuser" and Password "password567" into element with selector "#sign-username" and "#sign-password"
+        When I type Username "madhutest" and Password "xyz123456" into element with selector "#sign-username" and "#sign-password"
         Then I click on selector "button[onclick='register()']"
         Then I should see Sign up successful message alert
 
