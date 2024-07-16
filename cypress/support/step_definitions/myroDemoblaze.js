@@ -2,9 +2,9 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import "cypress-iframe";
 // import demo_home_PO from "../page-object/demo_home_PO"
-import demoProductPo from "../page-object/demoProductPO";
-import demo_cart_PO from "../page-object/demo_cart_PO";
-import myrodemoHome_PO from "../page-object/myrodemoHome_PO"
+import myroDemoProduct_Po from "../page-object/myroDemoProductPO";
+import myroDemo_cart_PO from "../page-object/myroDemo_cart_PO";
+import myroDemoHome_PO from "../page-object/myroDemoHome_PO"
 
 
 // Given("I navigate to the Demoblaze homepage", () => {
@@ -12,14 +12,14 @@ import myrodemoHome_PO from "../page-object/myrodemoHome_PO"
 // });
 
 Given("I navigate to the Demoblaze homepage", () => {
-  cy.fixture("demoblaze.json").then((data) => {
+  cy.fixture("myroDemoblaze.json").then((data) => {
     cy.visit(data.baseUrl);
   });
 });
 
 
 
-var homePage = new myrodemoHome_PO();
+var homePage = new myroDemoHome_PO();
 
 // When("I click a product {string}", (product) => {
 //   homePage.clickProduct(product);
@@ -27,11 +27,19 @@ var homePage = new myrodemoHome_PO();
 
 
 When("I click on Samsung Phone", () => {
-  cy.fixture("demoblaze.json").then((data) => {
+  cy.fixture("myroDemoblaze.json").then((data) => {
     homePage.clickProduct(data.products.s6);
   });
 });
-let productPage = new demoProductPo()
+
+// Then("I check samsung product description", () => {
+//   cy.fixture("myroDemoblaze.json").then((data) => {
+//     cy.get('#more-information > p').should("eq", data.productDescription.nokia)
+//   });
+// });
+
+
+let productPage = new myroDemoProduct_Po()
 
 Then("I add the product to the cart", () => {
   productPage.clickAddToCartButton()
@@ -50,7 +58,7 @@ When("I click on the Cart button", () => {
 });
 
 
-let cartPage = new demo_cart_PO()
+let cartPage = new myroDemo_cart_PO()
 
 
 Then("I check Products label", () => {
