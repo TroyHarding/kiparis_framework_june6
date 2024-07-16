@@ -2,9 +2,9 @@
 
 class demo_cart_PO {
     constructor() {
-      this.productLabelSelector = ".col-lg-8 > h2";
+      this.productLabelSelector = "#page-wrapper > div > div.col-lg-8 > h2";
       this.productlabelText = "Products"
-      this.totalLabelSelector = "div[class='col-lg-1'] h2";
+      this.totalLabelSelector = "#page-wrapper > div > div.col-lg-1 > h2";
       this.totalLabelText = "Total"
       this.totalPriceSelector = "#totalp";
       this.label360Text = "360";
