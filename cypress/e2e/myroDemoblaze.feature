@@ -33,6 +33,7 @@ Feature: Demoblaze site
         Given I navigate to the Demoblaze homepage
         # When I click a product "Nokia lumia 1520"
         When I click on Samsung Phone
+        # Then I check samsung product description
         When I add the product to the cart
         Then the product should be added to the cart
         
