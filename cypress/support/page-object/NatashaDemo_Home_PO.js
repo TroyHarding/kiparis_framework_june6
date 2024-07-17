@@ -1,5 +1,3 @@
-import demoblaze_PO from "./NatashaDemo_Home_PO";
-
 /// <reference types="cypress" />
 
 class demo_home_PO {
@@ -26,6 +24,10 @@ class demo_home_PO {
     //Pages
     this.previousPage = "#prev2";
     this.nextPage = "#next2";
+    //Login Form
+    this.usernameField = "#loginusername";
+    this.passwordField = "#loginpassword";
+    this.loginConfirm = "button[onclick='logIn()']";
   }
 
   clickHome() {
@@ -57,11 +59,14 @@ class demo_home_PO {
   }
 
   clickLogin(username, password) {
-    cy.get(this.loginButton).click();
-    cy.wait(1000);
-    cy.get("#loginusername").type(username);
-    cy.get("#loginpassword").type(password);
-    cy.get("button[onclick='logIn()']").click();
+    cy.fixture("NatashaDemoblaze.json").then((data) => {
+      cy.visit(data.baseUrl);
+      cy.get(this.loginButton).click();
+      cy.wait(1000);
+      cy.get(this.usernameField).type(data.username);
+      cy.get(this.passwordField).type(data.password);
+      cy.get(this.loginConfirm).click();
+    });
   }
 
   clickProduct(product) {
