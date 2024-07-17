@@ -3,8 +3,8 @@
 class demo_home_PO {
   //special method
   constructor() {
+
     //CSS selectors
-    //Outline the Top Bar
     this.homeButton = "a[href='index.html'][class='nav-link']";
     this.contactButton = "a[data-target='#exampleModal']";
     this.aboutUsButton = "a[data-target='#videoModal']";
