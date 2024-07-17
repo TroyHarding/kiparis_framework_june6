@@ -2,7 +2,7 @@
 Feature: Demoblaze site
 
 
-    # @demo1
+    # @demo @myroslav
     # Scenario: User Registration
     #     Given I navigate to the Demoblaze homepage
     #     When I click on the Sign Up button
@@ -12,7 +12,7 @@ Feature: Demoblaze site
 
 
        
-    # @demo2
+    # @demo @myroslav
     # Scenario: User Login
     #     Given I navigate to the Demoblaze homepage
     #     When I click on the Log In button
@@ -28,7 +28,7 @@ Feature: Demoblaze site
         # When I click on element with selector "#logInModal > div > div > div.modal-footer > button.btn.btn-primary"
 
 
-    @demo3
+    @demo @myroslav
     Scenario: Add Product to Cart
         Given I navigate to the Demoblaze homepage
         # When I click a product "Nokia lumia 1520"
@@ -46,7 +46,7 @@ Feature: Demoblaze site
 
 
 
-    # @demo4
+    # @demo @myroslav
     # Scenario: Place an Order
     #     Given I navigate to the Demoblaze homepage
     #     When I click a product "Samsung galaxy s6"
