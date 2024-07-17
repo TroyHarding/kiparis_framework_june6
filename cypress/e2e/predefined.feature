@@ -26,6 +26,7 @@ Feature: Smoke steps
     Then element with selector "Submitted Application" should contain text "Submitted Application"
 
 
+
   @smoke3
   Scenario: Wikipedia
     Given I open url "https://www.wikipedia.org/"

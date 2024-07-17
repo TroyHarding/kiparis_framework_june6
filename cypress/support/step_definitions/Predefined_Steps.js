@@ -25,6 +25,7 @@ Given(`I resize window to emulate {word}`, (device) => {
   }
 });
 
+
 Then(`I wait for {int} sec`, (sec) => {
   cy.wait(sec * 1000);
 });
