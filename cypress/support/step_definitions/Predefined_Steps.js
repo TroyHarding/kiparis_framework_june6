@@ -1,11 +1,6 @@
 /// <reference types="cypress" />
-import {
-  Given,
-  When,
-  Then,
-  And,
-} from "@badeball/cypress-cucumber-preprocessor";
-import 'cypress-iframe'
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import "cypress-iframe";
 
 Given(`I open url {string}`, (url) => {
   cy.visit(url);
@@ -63,6 +58,10 @@ When(`I click on element with selector {string}`, (selector) => {
   cy.get(selector).click();
 });
 
+When(`I add the {string} to the cart`, (selector) => {
+  cy.get(selector).click();
+});
+
 //title
 Then(`I should see page title as {string}`, (title) => {
   cy.title().should("eq", title);
@@ -90,7 +89,7 @@ Then(
 );
 
 Given(`I verify iframe with selector {string} has loaded`, (selector) => {
-  cy.frameLoaded('#Your\ project\:\ \'Test\ Project\'');
+  cy.frameLoaded("#Your project: 'Test Project'");
 });
 
 Then(
