@@ -30,12 +30,12 @@ Given(`I navigate to the Demoblaze homepage`, () => {
 //   }
 // );
 
-When(
-  `I enter username {string} and password {string}`,
-  (username, password) => {
-    home.clickLogin(username, password);
-  }
-);
+// When(
+//   `I enter username {string} and password {string}`,
+//   (username, password) => {
+//     home.clickLogin(username, password);
+//   }
+// );
 
 Then(`I verify should be logged in`, () => {
   //Fill Out the code with the right commands
@@ -57,6 +57,13 @@ Given(`I open url {string}`, () => {
 When(`I login with valid credentials`, (username, password) => {
   home.clickLogin(username, password);
 });
+
+When(
+  `I enter username {string} and password {string}`,
+  (username, password) => {
+    home.typeUsernamePassword(username, password);
+  }
+);
 
 Given(`I resize window to {int} and {int}"`, (width, height) => {
   cy.viewport(width, height);

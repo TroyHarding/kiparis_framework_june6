@@ -5,8 +5,9 @@ Feature: Demoblaze site Practice
     Scenario: User Registration
         Given I open url "<baseUrl>"
         When I click on element with selector "#signin2"
-        When I type "natasha9876" into element with selector "#sign-username"
-        And I type "password123" into element with selector "#sign-password"
+        # When I type "natasha9876" into element with selector "#sign-username"
+        # And I type "password123" into element with selector "#sign-password"
+        When I enter username "<username>" and password "<password>"
         When I click on element with selector "button[onclick='register()']"
 
     @demoblaze2 @natasha2

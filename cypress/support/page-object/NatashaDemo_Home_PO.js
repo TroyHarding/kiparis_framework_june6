@@ -28,6 +28,9 @@ class demo_home_PO {
     this.usernameField = "#loginusername";
     this.passwordField = "#loginpassword";
     this.loginConfirm = "button[onclick='logIn()']";
+    //SignUp Form
+    this.newUserField = "#sign-username";
+    this.newPasswordField = "#sign-password";
   }
 
   clickHome() {
@@ -50,14 +53,6 @@ class demo_home_PO {
     cy.get(this.cartButton).click();
   }
 
-  clickSignUp(username, password) {
-    cy.get(this.signUpButton).click();
-    cy.wait(1000);
-    cy.get("#sign-username").type(username);
-    cy.get("#sign-password").type(password);
-    cy.get("button[onclick='register()']").click();
-  }
-
   clickLogin(username, password) {
     cy.fixture("NatashaDemoblaze.json").then((data) => {
       cy.visit(data.baseUrl);
@@ -66,6 +61,21 @@ class demo_home_PO {
       cy.get(this.usernameField).type(data.username);
       cy.get(this.passwordField).type(data.password);
       cy.get(this.loginConfirm).click();
+    });
+  }
+
+  clickSignUp(username, password) {
+    cy.get(this.signUpButton).click();
+    cy.wait(1000);
+    cy.get("#sign-username").type(username);
+    cy.get("#sign-password").type(password);
+    cy.get("button[onclick='register()']").click();
+  }
+
+  typeUsernamePassword(username, password) {
+    cy.fixture("NatashaDemoblaze.json").then((data) => {
+      cy.get(this.newUserField).type(data.username);
+      cy.get(this.newPasswordField).type(data.password);
     });
   }
 
