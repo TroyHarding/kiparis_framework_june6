@@ -18,7 +18,7 @@ class Roman_HomePage_PO {
     this.phonesCategory = "a[onclick=byCat('phone')]";
     this.laptopsCategory = "a[onclick=byCat('notebook')]";
     this.monitorsCategory = "a[onclick=byCat('monitor')]";
-    //product
+    //productt
     this.cardtitle = ".card-title";
     //Pages
     this.previousPage = "#prev2";
@@ -93,9 +93,9 @@ class Roman_HomePage_PO {
   }
 
   clickProduct(product) {
-      cy.contains(this.cardtitle, product).click();
-      cy.wait(1000);
-    };
+    cy.contains(this.cardtitle, product).click();
+    cy.wait(1000);
+  }
 
   //Login Methods
   enterLoginBilly() {
@@ -136,8 +136,6 @@ class Roman_HomePage_PO {
       expect(message).to.equal("Sign up successful.");
     });
   }
-
-
 }
 
 export default Roman_HomePage_PO;

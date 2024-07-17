@@ -14,7 +14,7 @@ Scenario: User Registration
 
 
 @demo2 @roman2 
-Scenario: User Login
+Scenario: User Loginn
 When I clickk on the Log In button
 Then I wait for 1 sec
 Then I enter VALID login username and password
