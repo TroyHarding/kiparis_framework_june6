@@ -27,7 +27,7 @@ var homePage = new myroDemoHomePO();
 
 
 When("I click on Samsung Phone", () => {
-  cy.fixture("myroDemoblaze.json").then((data) => {
+  cy.fixture("MyroDemoblaze.json").then((data) => {
     homePage.clickProduct(data.products.s6);
   });
 });
