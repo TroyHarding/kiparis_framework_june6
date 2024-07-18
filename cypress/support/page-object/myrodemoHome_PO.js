@@ -30,7 +30,7 @@ class demo_PO {
         this.productStoreText = "#fotcont > div:nth-child(3) > div > div > h4"
         
         //header
-        this.productStore = "#nava"
+        this.productStore =  "#nava"
         //product
         this.cardtitle = ".card-title"
 
