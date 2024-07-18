@@ -4,7 +4,7 @@ import "cypress-iframe";
 // import demo_home_PO from "../page-object/demo_home_PO"
 import myroDemoProduct_Po from "../page-object/myroDemoProductPO";
 import myroDemo_cart_PO from "../page-object/myroDemo_cart_PO";
-import myroDemoHome_PO from "../page-object/myroDemoHome_PO"
+import myroDemoHomePO from "../page-object/myroDemoHomePO"
 
 
 // Given("I navigate to the Demoblaze homepage", () => {
@@ -19,7 +19,7 @@ Given("I navigate to the Demoblaze homepage", () => {
 
 
 
-var homePage = new myroDemoHome_PO();
+var homePage = new myroDemoHomePO();
 
 // When("I click a product {string}", (product) => {
 //   homePage.clickProduct(product);
