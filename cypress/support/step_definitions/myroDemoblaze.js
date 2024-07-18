@@ -12,7 +12,7 @@ import myroDemoHomePO from "../page-object/myroDemoHomePO"
 // });
 
 Given("I navigate to the Demoblaze homepage", () => {
-  cy.fixture("myroDemoblaze.json").then((data) => {
+  cy.fixture("MyroDemoblaze.json").then((data) => {
     cy.visit(data.baseUrl);
   });
 });
