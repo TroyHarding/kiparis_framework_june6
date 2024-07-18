@@ -12,7 +12,7 @@ import myroDemoHomePO from "../page-object/myroDemoHomePO"
 // });
 
 Given("I navigate to the Demoblaze homepage", () => {
-  cy.fixture("MyroDemoblaze.json").then((data) => {
+  cy.fixture("myroDemoblaze.json").then((data) => {
     cy.visit(data.baseUrl);
   });
 });
@@ -27,13 +27,13 @@ var homePage = new myroDemoHomePO();
 
 
 When("I click on Samsung Phone", () => {
-  cy.fixture("MyroDemoblaze.json").then((data) => {
+  cy.fixture("myroDemoblaze.json").then((data) => {
     homePage.clickProduct(data.products.s6);
   });
 });
 
 // Then("I check samsung product description", () => {
-//   cy.fixture("MyroDemoblaze.json").then((data) => {
+//   cy.fixture("myroDemoblaze.json").then((data) => {
 //     cy.get('#more-information > p').should("eq", data.productDescription.nokia)
 //   });
 // });
