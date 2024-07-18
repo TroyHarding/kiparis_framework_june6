@@ -33,7 +33,7 @@ When("I click on Samsung Phone", () => {
 });
 
 // Then("I check samsung product description", () => {
-//   cy.fixture("myroDemoblaze.json").then((data) => {
+//   cy.fixture("MyroDemoblaze.json").then((data) => {
 //     cy.get('#more-information > p').should("eq", data.productDescription.nokia)
 //   });
 // });
