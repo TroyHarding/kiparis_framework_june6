@@ -14,6 +14,7 @@ Given(`I open url {string}`, (url) => {
 // When I click on element with selector "#signin2"
 When(`I click on element with selector {string}`, (selector) => {
   cy.get("#signin2").click();
+  cy.wait(2000);
 });
 
 //When I type Username "testuser" into element with selector "#sign-username" and Password "password567" into element with selector "#sign-password"
@@ -44,25 +45,20 @@ Then(`I should see Sign up successful message alert`, () => {
 //  When I click on Log in button with selector "#login2"
 When(`I click on Log in button with selector {string}`, (selector) => {
   cy.get("#login2").click();
+  cy.wait(1000);
 });
 
 // When I type Username "madhutest" into element with selector "#loginusername"
-When(
-  `I type Username {string} into element with selector {string}`,
-  (Username) => {
+When(`I type Username {string} into element with selector {string}`, (Username) => {
     cy.get("#loginusername").type("madhutest");
     cy.wait(2 * 1000);
-  }
-);
+  });
 
 // When I type Password "xyz123456" into element with selector "#loginpassword"
-When(
-  `I type Password {string} into element with selector {string}`,
-  (Password) => {
+When(`I type Password {string} into element with selector {string}`, (Password) => {
     cy.get("#loginpassword").type("xyz123456");
     cy.wait(2 * 1000);
-  }
-);
+  });
 
 //Then I click on element with selector "button[onclick='logIn()']"
 Then(`I click on Log in element with selector {string}`, (selector) => {
@@ -72,34 +68,35 @@ Then(`I click on Log in element with selector {string}`, (selector) => {
 
 //Then I verify user should be logged in
 Then(`I verify user should be logged in`, () => {
-  cy.get("#nameofuser").contains("Welcome madhutest");
+  cy.get("#nameofuser").contains("Welcome madhutest").should("be.visible");
 });
 
-// @demo3 and @demo4 comes together 
+// @demo3 and @demo4 comes together
 // Scenario:  Add Product to Cart
 // When I click a product "Samsung galaxy s6"
 When("I click a product {string}", (product) => {
-cy.contains(".card-title", product).click();
-cy.wait(1000);
+  cy.contains(".card-title", product).click();
+  cy.wait(1000);
 });
 
 Then("I add the product to the cart", () => {
-cy.get('a.btn.btn-success.btn-lg[onclick="addToCart(1)"]').click();
+  cy.get('a.btn.btn-success.btn-lg[onclick="addToCart(1)"]').click();
 });
 
-Then("the product should be added to the cart", () => {
-  // the www.demoblaze.com says Product added to the cart doesn't appear in cypress
+
+Then("the product should be added to the cart", () => {      // the www.demoblaze.com says Product added to the cart doesn't appear in cypress
+cy.get("#tbodyid").should("be.visible");
 });
 
 //When I click on the Cart button
 When("I click on the Cart button", () => {
-  cy.get('#cartur').click()
-  cy.wait(1000)
+  cy.get("#cartur").click();
+  cy.wait(1000);
 });
 
 //Then I click the Place Order Button
 Then("I click the Place Order Button", () => {
-cy.get("[data-target='#orderModal']").click()
+  cy.get("[data-target='#orderModal']").click();
 });
 
 //When I fill out the Place Order Field
@@ -114,6 +111,6 @@ When("I fill out the Place Order Field", () => {
 });
 
 Then("I should see an order confirmation", () => {
-  cy.wait(1000)
-  cy.contains("Thank you for your purchase!").should('be.visible')
-  });
+  cy.wait(1000);
+  cy.contains("Thank you for your purchase!").should("be.visible");
+});
