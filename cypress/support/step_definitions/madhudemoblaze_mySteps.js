@@ -69,6 +69,7 @@ Then(`I click on Log in element with selector {string}`, (selector) => {
 //Then I verify user should be logged in
 Then(`I verify user should be logged in`, () => {
   cy.get("#nameofuser").contains("Welcome madhutest").should("be.visible");
+  cy.wait(2 * 1000);
 });
 
 // @demo3 and @demo4 comes together
