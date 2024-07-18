@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor"
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import "cypress-iframe";
 // import demo_home_PO from "../page-object/demo_home_PO"
 import myroDemoProduct_Po from "../page-object/myroDemoProductPO";
