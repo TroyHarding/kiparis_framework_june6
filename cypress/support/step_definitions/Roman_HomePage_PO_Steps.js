@@ -19,7 +19,7 @@ Given("I navigate to the Demoblaze homepage", () => {
   navHomeP.navigateHomePage();
 });
 
-When("I clickk on the Log In button", () => {
+When("I click on the Log In button", () => {
   const clickloginB = new Roman_HomePage_PO();
   clickloginB.clickLoginButton();
 });

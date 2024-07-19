@@ -15,7 +15,7 @@ Scenario: User Registration
 
 @demo2 @roman2 
 Scenario: User Loginn
-When I clickk on the Log In button
+When I click on the Log In button
 Then I wait for 1 sec
 Then I enter VALID login username and password
 Then I click Log In in the modal
