@@ -52,7 +52,7 @@ Scenario:  Predefined steps for swisscows
   Then I should see page title contains "Swisscows"
   Then element with selector "#__next > div > header > div.row > div.form-wrapper > form > div > div > input" should be present
   When I type "Behavior Driven Development" into element with selector "#__next > div > header > div.row > div.form-wrapper > form > div > div > input"
-  Then I click on element with selector "#__next > div > header > div.row > div.form-wrapper > form > button > svg"
+  When I click on element with selector "#__next > div > header > div.row > div.form-wrapper > form > button > svg"
   Then I wait for element with selector "#__next > div" to be present
   Then element with selector "#__next > div" should contain text "Cucumber"
 
