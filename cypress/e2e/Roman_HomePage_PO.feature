@@ -2,7 +2,7 @@
 Feature: Demoblaze site
 
 Background: Navigate to the Demoblaze homepage
-Given I nnavigate to the Demoblaze homepage
+Given I navigate to the Demoblaze homepage
 
 @demo1 @roman1
 Scenario: User Registration

@@ -6,7 +6,7 @@ class Roman_ProdPage_PO {
     this.addToCartButton = "a[onclick='addToCart(1)']";
   }
 
-  //Product Page Methods
+  //Product Page Methodss
   clickAddToCartBtn() {
     cy.get(this.addToCartButton).click();
   }
@@ -18,10 +18,7 @@ class Roman_ProdPage_PO {
   }
   verifyProductDescription() {
     cy.fixture("Roman_HomePage_PO_fixture.json").then((data) => {
-      cy.get(".name").should(
-        "eq",
-        data.productNames["samsung"]
-      );
+      cy.get(".name").should("eq", data.productNames["samsung"]);
     });
   }
 }

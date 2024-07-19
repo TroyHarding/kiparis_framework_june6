@@ -14,7 +14,7 @@ import Roman_ProdPage_PO from "../page-object/Roman_ProdPage_PO";
 var homepage = new Roman_HomePage_PO();
 var prodpage = new Roman_ProdPage_PO();
 
-Given("I nnavigate to the Demoblaze homepage", () => {
+Given("I navigate to the Demoblaze homepage", () => {
   const navHomeP = new Roman_HomePage_PO();
   navHomeP.navigateHomePage();
 });
