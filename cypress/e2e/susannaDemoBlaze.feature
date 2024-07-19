@@ -18,7 +18,7 @@ Feature: Demoblaze site
     When I type "susanna321" into element with selector "#loginusername"
     When I type "passworD" into element with selector "#loginpassword"
     When I click on element with selector "button[onclick='logIn()']"
-    Then element with selector "#nameofuser" should be present
+    Then element with selector "a#nameofuser.nav-link" should be present
 
   @demo3 @susanna
   Scenario: Add Product to Cart
