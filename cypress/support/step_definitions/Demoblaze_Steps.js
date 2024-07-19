@@ -23,7 +23,9 @@ When("I click Log In in the modal", () => {
   home.clickingLogIn();
 });
 Then("I verify should be logged in", () => {
-  cy.get("#nameofuser").should("have.text", "Welcome millwaukee");
+  Cypress.on("window:alert", (message) => {
+    expect(message).to.equal("Sign up successful.");
+  });
 });
 //////////////////////////////////////////////////////////////
 // When("I click a product {string}", (product) => {

@@ -1,8 +1,8 @@
 
-@demo 
+@anatoly
 Feature: Demoblaze site
 
-  @demo1
+  @anatoly1
   Scenario: User Login
     Given I navigate to the Demoblaze homepage
     When I click on the Log In button

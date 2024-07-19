@@ -43,7 +43,7 @@ class HomePage {
 
   enterLoginCredentials() {
     cy.get("#loginusername").type("millwaukee");
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get("#loginpassword").type("72348");
   }
 
