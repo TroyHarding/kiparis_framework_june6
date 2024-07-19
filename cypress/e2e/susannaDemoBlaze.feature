@@ -15,15 +15,19 @@ Feature: Demoblaze site
     Given I open url "https://demoblaze.com/"
     When I click on element with selector "#login2"
     Then element with selector "div[id='logInModal'] div[class='modal-header']" should be present
+    Then I wait for 2 sec
     When I type "susanna321" into element with selector "#loginusername"
     When I type "passworD" into element with selector "#loginpassword"
     When I click on element with selector "button[onclick='logIn()']"
-    Then element with selector "a#nameofuser.nav-link" should be present
+    # Then element with selector "a#nameofuser.nav-link" should be present
+    Then element with selector "#nameofuser" should be present
+    Then I wait for 2 sec
 
   @demo3 @susanna
   Scenario: Add Product to Cart
     Given I open url "https://demoblaze.com/"
     When I click on element with selector "body > div:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h4:nth-child(1) > a:nth-child(1)"
+    # When I click on element with selector "h4[class='card-title']"
     Then I wait for 2 sec
     When I click on element with selector ".btn.btn-success.btn-lg"
     When I click on element with selector "#cartur"
