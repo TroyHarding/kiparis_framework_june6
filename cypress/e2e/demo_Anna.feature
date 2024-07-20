@@ -10,12 +10,14 @@ Feature: Demoblaze site
         When I click Log In in the modal
         Then I verify should be logged in
 
+    @demo2 @Anna
     Scenario: Add Product to Cart
         Given I navigate to the Demoblaze homepage
         When I click a product "Samsung galaxy s6"
         Then I add the product to the cart
         Then the product should be added to the cart
-
+        
+    @demo3 @Anna
     Scenario: Place an Order
         Given I navigate to the Demoblaze homepage
         When I click a product "Samsung galaxy s6"
