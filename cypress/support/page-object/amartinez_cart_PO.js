@@ -29,7 +29,7 @@ constructor() {
   this.placeOrderPurchaseButton = "button[onclick='purchaseOrder()']"; 
 
   //confirmation
-  this.purchaseConfirmation = "body > div:nth-child(11)";
+  this.purchaseConfirmation = ".lead.text-muted";
 
 
 }

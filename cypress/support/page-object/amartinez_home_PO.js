@@ -12,8 +12,10 @@ class amartinez_home_PO {
 
   this.products = "#tbodyid";
 
+
+
   this.nextButton = "#next2";
-  history.previousButton = "#prev2"; 
+  this.previousButton = "#prev2"; 
 
   this.carousel = ".carousel-item.active";
 
@@ -122,7 +124,7 @@ class amartinez_home_PO {
   }
 
   clickPreviousButton(){
-   cy.get(this.prev).click(); 
+   cy.get(this.previousButton).click(); 
   }
 
 verifyProductCountHomePage(){
@@ -138,7 +140,7 @@ verifyProductCountNextPage(){
 }
 
   verifyHomepagePhoneProducts(){
-    cy.get(this.products).contains("s6"); 
+    cy.get(this.products).contains("s7"); 
     cy.get(this.products).contains("650");
     cy.get(this.products).contains("Qualcomm");
 }
