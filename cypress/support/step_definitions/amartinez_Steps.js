@@ -129,8 +129,9 @@ import {
     demo1.verifyHomepageLaptopProducts();
     demo1.verifyHomepageMonitorProducts(); 
     // demo1.verifyProductCountNextPage(); 
+    }) 
 
-}) 
+    
 
     When ('I click Previous page Button', () => {
       demo1.clickPreviousButton();

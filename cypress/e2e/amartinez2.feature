@@ -40,3 +40,4 @@ Feature: Basic functionality of Demoblaze site
         When  I click the Place Order Button
         When I fill out the Place Order Field
         Then I should see an order confirmation     
+        

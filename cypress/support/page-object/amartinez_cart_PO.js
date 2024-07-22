@@ -95,9 +95,6 @@ constructor() {
       cy.get(this.purchaseConfirmation).should("be.visible");
       
     }
-
-
-
     
   }
   
