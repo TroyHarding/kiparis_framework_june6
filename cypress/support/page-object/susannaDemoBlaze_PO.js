@@ -25,7 +25,7 @@ class susannaDemoBlaze_PO {
 
     //The products
     this.cardtitle = ".card-title";
-
+  }
 
   clickHomeButton() {
     cy.get(this.homeButton).click();
@@ -67,7 +67,7 @@ class susannaDemoBlaze_PO {
     cy.get(this.nextButton).click();
   }
 
-  clickPreviousButton(){
+  clickPreviousButton() {
     cy.get(this.previousButton).click();
   }
 
@@ -75,8 +75,6 @@ class susannaDemoBlaze_PO {
     cy.contains(this.card - title, product).click();
     cy.wait(1000);
   }
-}
-
 }
 
 export default susannaDemoBlaze_PO;
