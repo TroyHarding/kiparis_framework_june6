@@ -1,34 +1,73 @@
 /// <reference types="cypress" />
 
-class demo_home_PO{
-    constructor(){
-        // CSS selectors
-        //Outline the Top Bar
-        this.homeButton = "a[href='index.html'][class='nav-link']";
-        this.contactButton = "a[data-target='#exampleModal']";
-        this.aboutUsButton = "";
-        this.cartButton = "";
-        this.loginButton = "";
-        this.signUpButton = "";
+class susannaDemoBlaze_PO {
+  constructor() {
+    // CSS selectors
+    //Outline the Top Bar
+    this.homeButton = "a[href='index.html'][class='nav-link']";
+    this.contactButton = "a[data-target='#exampleModal']";
+    this.aboutUsButton = "a[data-target='#videoModal']";
+    this.cartButton = "#cartur";
+    this.loginButton = "#login2";
+    this.signUpButton = "#signin2";
 
-        //The Carosel
+    //The Carousel
+    this.leftArrow = ".carousel-control-prev-icon";
+    this.carouselContent = "img[alt='Third slide']";
+    this.rightArrow = ".carousel-control-next-icon";
 
-        //The categories
+    //The categories
+    this.catogoriesPhones = "a[onclick='byCat('phone')']";
+    this.catagoriesLaptops = "a[onclick='byCat('notebook')']";
+    this.catagoriesMonitors = "a[onclick='byCat('monitor')']";
 
-        //product
-        this.cardtitle =".card-title";
-    }
+    //The products
+    this.cardtitle = ".card-title";
 
-    clickProduct(product){
-        cy.contains(this.card-title, product).click();
-        cy.wait(1000);
-    }
+    //The footers
+    this.footer = "div[id='footc'] div:nth-child(3)";
+  }
 
-    clickHome(){
-        cy.get(this.homeButton).click()
-    }
+  clickHome() {
+    cy.get(this.homeButton).click();
+  }
 
+  clickContact() {
+    cy.get(this.contactButton).click();
+  }
+
+  clickUs() {
+    cy.get(this.aboutUsButton).click();
+  }
+
+  clickCart() {
+    cy.get(this.cartButton).click();
+  }
+
+  clickLogin() {
+    cy.get(this.loginButton).click();
+  }
+
+  clickSignUp() {
+    cy.get(this.signUpButton).click();
+  }
+
+  clickCatagoriesPhones() {
+    cy.get(this.catogoriesPhones).click();
+  }
+
+  clickCatagoriesLaptops() {
+    cy.get(this.catagoriesLaptops).click();
+  }
+
+  clickCatagoriesMonitors() {
+    cy.get(this.catagoriesMonitors).click();
+  }
+
+  clickProduct(product) {
+    cy.contains(this.card - title, product).click();
+    cy.wait(1000);
+  }
 }
 
-export default demo_home_PO;
-
+export default susannaDemoBlaze_PO;

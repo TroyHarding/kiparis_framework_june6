@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import "cypress-iframe";
-  //import susannaDemoBlaze_PO() from "../page-object/susannaDemoBlaze_PO()";
+import susannaDemoBlaze_PO from "../page-object/susannaDemoBlaze_PO";
 
-  //const demo = new susannaDemoBlaze_PO();
+const demo = new susannaDemoBlaze_PO();
 
 // Sign Up
 Given(`I navigate to the Demoblaze homepage`, () => {
@@ -31,7 +31,7 @@ When(`I click on Sign Up button`, () => {
   cy.wait(5000);
 });
 
-Then('I should see a registration confirmation', () => {
+Then("I should see a registration confirmation", () => {
   cy.on("window:alert", (message) => {
     expect(message).to.equal("Sign up successful.");
   });
