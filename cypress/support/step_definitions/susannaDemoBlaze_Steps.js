@@ -31,9 +31,10 @@ When(`I click on Sign Up button`, () => {
   cy.wait(5000);
 });
 
-Then(`I should see a registration confirmation`, () => {
-  cy.contains("Sign up successful.").should("be.visible");
-  cy.wait(5000);
+Then('I should see a registration confirmation', () => {
+  cy.on("window:alert", (message) => {
+    expect(message).to.equal("Sign up successful.");
+  });
 });
 
 // Login
@@ -69,15 +70,18 @@ When(`I click a product {string}`, (product) => {
   cy.wait(5000);
 });
 
+// Add Product to Cart
+
 When(`I add the product to the cart`, () => {
   cy.get(".btn.btn-success.btn-lg").click();
   cy.wait(5000);
 });
 
-// Then(`I should see product added to the cart`, () => {
-//   cy.contains("Product added").should("be.visible").click();
-//   cy.wait(5000);
-// });
+Then("the product should be added to the cart", () => {
+  cy.on("window:alert", (message) => {
+    expect(message).to.equal("Product added");
+  });
+});
 
 // Place an Order
 

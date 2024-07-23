@@ -5,9 +5,9 @@ Feature: Demoblaze site
  Scenario: User Registration
     Given I navigate to the Demoblaze homepage
     When I click on the Sign Up button
-    When I enter username "susanan121" and password "password1"
+    When I enter username "susanan333" and password "password1"
     When I click on Sign Up button
-    # Then I should see a registration confirmation
+    Then I should see a registration confirmation
 
 @demo2 @susanna
 Scenario: User Login
@@ -22,7 +22,7 @@ Scenario: Add Product to Cart
     Given I navigate to the Demoblaze homepage
     When I click a product "Samsung galaxy s6"
     When I add the product to the cart
-    # Then I should see product added to the cart
+    Then the product should be added to the cart
 
 @demo4 @susanna
 Scenario: Place an Order
