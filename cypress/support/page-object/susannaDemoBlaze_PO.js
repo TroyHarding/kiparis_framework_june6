@@ -17,48 +17,58 @@ class susannaDemoBlaze_PO {
     this.rightArrow = ".carousel-control-next-icon";
 
     //The categories
-    this.catogoriesPhones = "a[onclick='byCat('phone')']";
-    this.catagoriesLaptops = "a[onclick='byCat('notebook')']";
-    this.catagoriesMonitors = "a[onclick='byCat('monitor')']";
+    this.categoriesPhones = "a[onclick='byCat('phone')']";
+    this.categoriesLaptops = "a[onclick='byCat('notebook')']";
+    this.categoriesMonitors = "a[onclick='byCat('monitor')']";
+    this.previousButton = "#prev2";
+    this.nextButton = "#next2";
 
     //The products
     this.cardtitle = ".card-title";
 
 
-  clickHome() {
+  clickHomeButton() {
     cy.get(this.homeButton).click();
   }
 
-  clickContact() {
+  clickContactButton() {
     cy.get(this.contactButton).click();
   }
 
-  clickAboutUs() {
+  clickAboutUsButton() {
     cy.get(this.aboutUsButton).click();
   }
 
-  clickCart() {
+  clickCartButton() {
     cy.get(this.cartButton).click();
   }
 
-  clickLogin() {
+  clickLoginButton() {
     cy.get(this.loginButton).click();
   }
 
-  clickSignUp() {
+  clickSignUpButton() {
     cy.get(this.signUpButton).click();
   }
 
   clickCatagoriesPhones() {
-    cy.get(this.catogoriesPhones).click();
+    cy.get(this.categoriesPhones).click();
   }
 
   clickCatagoriesLaptops() {
-    cy.get(this.catagoriesLaptops).click();
+    cy.get(this.categoriesLaptops).click();
   }
 
   clickCatagoriesMonitors() {
-    cy.get(this.catagoriesMonitors).click();
+    cy.get(this.categoriesMonitors).click();
+  }
+
+  clickNextButton() {
+    cy.get(this.nextButton).click();
+  }
+
+  clickPreviousButton(){
+    cy.get(this.previousButton).click();
   }
 
   clickProduct(product) {
