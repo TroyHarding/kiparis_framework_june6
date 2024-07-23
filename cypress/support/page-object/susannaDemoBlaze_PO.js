@@ -24,9 +24,6 @@ class susannaDemoBlaze_PO {
     //The products
     this.cardtitle = ".card-title";
 
-    //The footers
-    this.footer = "div[id='footc'] div:nth-child(3)";
-  }
 
   clickHome() {
     cy.get(this.homeButton).click();
@@ -36,7 +33,7 @@ class susannaDemoBlaze_PO {
     cy.get(this.contactButton).click();
   }
 
-  clickUs() {
+  clickAboutUs() {
     cy.get(this.aboutUsButton).click();
   }
 
@@ -68,6 +65,8 @@ class susannaDemoBlaze_PO {
     cy.contains(this.card - title, product).click();
     cy.wait(1000);
   }
+}
+
 }
 
 export default susannaDemoBlaze_PO;
