@@ -1,5 +1,47 @@
 {
     "baseUrl": "https://www.demoblaze.com/",
-    "username": "billyjoebob",
-    "password": "password1"
-  }
+    "username": "testuser",
+    "password": "123456",
+  
+
+    "product": {
+    "samsung": "Samsung galaxy s6",
+    "nokia": "Nokia Lumia 1520",
+    "nexus6": "Nexus 6",
+    "samsung": "Samsung galaxy s7",
+    "iphone6": "Iphone 6 32gb",
+    "sony": "Sony xperia z5",
+    "htc": "HTC One M9",
+    "sony": "Sony vaio i5",
+    "sony": "Sony vaio i7"
+  },
+
+  "productPrices": {
+    "samsung": "360",
+    "nokia": "820",
+    "nexus6": "650",
+    "samsung": "800",
+    "iphone6": "790b",
+    "sony": "320",
+    "htc": "700",
+    "sony": "790",
+    "sony": "790"
+
+
+  },
+
+  // // "productDescriptions":{
+  // //   "samsung": "The Samsung Galaxy S6 is powered by 1.5GHz octa-core Samsung Exynos 7420 processor",
+  // //   "nokia": "The Nokia Lumia 1520 is powered by 2.2GHz quad-core Qualcomm Snapdragon 800",
+  // //   "nexus6": "The Motorola Google Nexus 6 is powered by 2.7GHz quad-core Qualcomm Snapdragon 805",
+  // //   "samsung": "The Samsung Galaxy S7 is powered by 1.6GHz octa-core it comes with 4GB of RAM",
+  // //   "iphone6": "It comes with 1GB of RAM. The phone packs 16GB of internal storage cannot be expanded",
+  // //   "sony": "Sony Xperia Z5 Dual smartphone was launched in September 2015",
+  // //   "htc": "The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. 
+  // //   The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD card",
+  // //   "sony": "Sony is so confident that the VAIO S is a superior ultraportable laptop that the company proudly compares the notebook to Apple's 13-inch MacBook Pro.
+  // //    And in a lot of ways this notebook is better, thanks to a lighter weight",
+  // //   "sony": "REVIEW Sony is so confident that the VAIO S is a superior ultraportable laptop that the company proudly compares the notebook to Apple's 13-inch MacBook Pro.
+  // //    And in a lot of ways this notebook is better, thanks to a lighter weight, higher-resolution display, more storage space, and a Blu-ray drive."
+    
+  // }

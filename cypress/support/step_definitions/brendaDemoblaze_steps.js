@@ -8,18 +8,16 @@ import {
   import demoblaze_PO from "../page-object/demoblaze_PO";
   import demo_brendaHome_PO from "../page-object/demo_brendaHome_PO"; 
 
-  
-  const demo = new demoblaze_PO();
+  // const demo = new demoblaze_PO();
   
     // Given(`I login to Demoblaze as a valid user`, () => {
     //   demo.loginValid();
     // });
   
-    var homepage = new demo_home_PO();
-  
-  
-  // Scenario: UserLogin
+    // var homepage = new demo_brendaHome_PO();
+
     Given(`I navigate to the Demoblaze homepage`, () => {
+      //fill Out the code w/ r/ commands.
       cy.visit("https://www.demoblaze.com/index.html");
     });
   
@@ -31,7 +29,7 @@ import {
     When(`I enter username {string} and password {string}`, (testuser, password) => {
       cy.get("#loginusername").type(testuser);
       cy.wait(1000);
-      cy.get("#loginpassword").type(123456);
+      cy.get("#loginpassword").type(password);
       cy.wait(1000);
     });
   
@@ -43,22 +41,22 @@ import {
       cy.get("button[onclick='login()']").click(); 
     });
   
-  
     When(`I click a product {string}`, (product) => {
       cy.get("h4 > a[href='prod.html?idp_=1']", product).click();
       cy.wait(1000);
+      // homepage.clickProduct(product)
     });
   
     When(`I add the product to the cart`, () => {
        cy.get('a.btn.btn-success.btn-lg[onclick="addToCart(1)"]').click();
-      //cy.get("a[onclick='addToCart(1)'").click();
+      // cy.get("a[onclick='addToCart(1)'").click();
       // cy.visit("a[onclick='showcart()']").click();
     });
   
     Then(`the product should be verified to the cart`, () => {
-      cy.get("#tbodyid").should("be.visible");
+      cy.get("#tbodyid").should("have.text", "Samsung galaxy s6");
     });
-  //the url www.demoblaze.com says Product added to the cart doesn't appear in cypress
+  
   //Click the Cart
   //Verify something is there
    
@@ -66,7 +64,8 @@ import {
       cy.get("#cartur").click();
       cy.wait(1000);
     });
-  
+
+
     When(`I click the Place Order Button`, () => {
       cy.get("button[data-target='#orderModal']").click();
     });
@@ -88,4 +87,4 @@ import {
   
   
   
-    
+   

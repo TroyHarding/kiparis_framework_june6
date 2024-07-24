@@ -9,6 +9,9 @@ import 'cypress-iframe'
 
 Given(`I open url {string}`, (url) => {
   cy.visit(url);
+  cy.fixture("demoblaze.json").then((d) =>{
+    cy.visit(d.baseUrl);
+  });
 });
 
 Given(`I resize window to {int} and {int}"`, (width, height) => {
@@ -55,6 +58,7 @@ When(
   `I type {string} into element with selector {string}`,
   (text, selector) => {
     cy.get(selector).type(text);
+    cy.wait(2 * 1000);
   }
 );
 
