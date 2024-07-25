@@ -2,13 +2,18 @@
 
 
 class parabank_PO {
-    //Elements
+  constructor() {
+    // CSS selectors
+    this.homeButton = 'a[href="index.html"][class="nav-link"]';
 
+  }
 
-
-
-
-    //Functions
+  //Methods
+  navigateHomePage() {
+    cy.fixture("Roman_HomePage_PO_fixture.json").then((data) => {
+      cy.visit(data.baseUrl);
+    });
+  }
 
 
 
