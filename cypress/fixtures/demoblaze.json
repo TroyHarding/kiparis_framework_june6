@@ -1,6 +1,13 @@
 {
-    "baseUrl": "https://www.demoblaze.com/",
-    "username": "billyjoebob",
-    "password": "password1"
-  }
-  
+  "baseUrl": "https://www.demoblaze.com/",
+  "username": "billyjoebob",
+  "password": "password1",
+  "newUsername": "new_user",
+  "newPassword": "new_password",
+  "checkoutName": "John Doe",
+  "checkoutCountry": "USA",
+  "checkoutCity": "New York",
+  "checkoutCard": "1234567890123456",
+  "checkoutMonth": "12",
+  "checkoutYear": "2024"
+}
