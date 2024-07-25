@@ -93,8 +93,10 @@ class Roman_HomePage_PO {
   }
 
   clickProduct(product) {
-    cy.contains(this.cardtitle, product).click();
-    cy.wait(1000);
+    cy.fixture("Roman_HomePage_PO_fixture.json").then((data) => {
+      cy.contains(this.cardtitle, data.productNames[product]).click();
+      cy.wait(1000);
+    });
   }
 
   //Login Methods

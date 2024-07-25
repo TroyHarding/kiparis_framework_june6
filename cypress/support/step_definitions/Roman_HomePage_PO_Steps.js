@@ -74,7 +74,7 @@ Then("the product should be added to the cart", () => {
   verifyProdAddedToCart.verifyProdAddedToCart();
 });
 
-Then("Verify description shows descritpion for samsung", () => {
+Then("Verify description shows descritpion for {string}", (product) => {
   const verifyProductDescription = new Roman_ProdPage_PO();
-  verifyProductDescription.verifyProductDescription();
+  verifyProductDescription.verifyProductDescription(product);
 });

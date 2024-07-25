@@ -21,9 +21,26 @@ Then I enter VALID login username and password
 Then I click Log In in the modal
 Then I verify user should be logged in
 
+# @demo3 @roman3
+# Scenario: Add Product to Cart
+# When I click on a product "Nokia lumia 1520"
+# Then Verify description shows descritpion for "nokia"
+# Then I add the product to the cart
+# Then the product should be added to the cart
+
 @demo3 @roman3
-Scenario: Add Product to Cart
-When I click on a product "Samsung galaxy s6"
-# Then Verify description shows descritpion for samsung
+Scenario Outline: Scenario Outline name: Add Product to Cart
+When I click on a product "<pr>"
+Then Verify description shows descritpion for "<pr>"
 Then I add the product to the cart
 Then the product should be added to the cart
+Examples:
+    | pr | 
+    | samsung |
+    | nokia  |
+    | nexus |
+
+    # | product_name      | product | 
+    # | Samsung galaxy s6 | samsung |
+    # | Nokia lumia 1520  | nokia  |
+    # | Nexus 6           | nexus |
