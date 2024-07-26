@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-// var userName;
+var userName = "User";
 
 class parabank_PO {
   constructor() {
-    // const randomNumber = Math.floor(Math.random() * 1000);
-    // var userName = userName + randomNumber;
+    const randomNumber = Math.floor(Math.random() * 10000);
+    userName = userName + randomNumber;
     // CSS selectors
     this.homeButton = 'a[href="index.html"][class="nav-link"]';
     this.regLink = "a[href*=register]";
@@ -21,7 +21,7 @@ class parabank_PO {
     this.phone = "input[id='customer.phoneNumber']";
     this.ssn = "input[id='customer.ssn']";
     this.RegButton = "input[value='Register']";
-    this.welcomeUser = "h1[class*=title]";
+    this.welcomeUser = "div[id='rightPanel'] p";
   }
 
   //Methods
@@ -36,10 +36,7 @@ class parabank_PO {
 
   validRegDataFill() {
     cy.fixture("parabank.json").then((data) => {
-      cy.get(this.SignUpUserName)
-        .click()
-        // .type(data.signUpUsername + userName);
-        .type(data.signUpUsername);
+      cy.get(this.SignUpUserName).click().type(userName);
       cy.wait(1000);
       cy.get(this.FirstName).click().type(data.FirstName);
       cy.get(this.LastName).click().type(data.LastName);
@@ -61,7 +58,10 @@ class parabank_PO {
     cy.fixture("parabank.json").then((data) => {
       cy.get(this.welcomeUser)
         .should("be.visible")
-        .and("have.text", "Welcome " + data.signUpUsername);
+        .and(
+          "have.text",
+          "Your account was created successfully. You are now logged in."
+        );
     });
   }
 }
