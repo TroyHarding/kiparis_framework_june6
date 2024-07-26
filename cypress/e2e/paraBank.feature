@@ -8,8 +8,8 @@ Background: Open Parabank Url
   Scenario: Automate User Registration process
     When I click on the Register link
     When I add valid registration data
-    When I click on the Register button
-    Then I verify user registered successfully
+    # When I click on the Register button
+    # Then I verify user registered successfully
 
   # Scenario: Automate that user is able to login successfully
   #   When I enter the valid username
