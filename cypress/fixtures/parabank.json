@@ -2,7 +2,6 @@
   "baseUrl": "https://parabank.parasoft.com/parabank/index.htm",
   "username": "GGG",
   "password": "p@ssword",
-  // "signUpUsername": "43wefgwe",
   "signUpPassword": "1234567890",
   "FirstName": "Peter",
   "LastName": "G",
