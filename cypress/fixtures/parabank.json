@@ -2,13 +2,16 @@
   "baseUrl": "https://parabank.parasoft.com/parabank/index.htm",
   "username": "GGG",
   "password": "p@ssword",
-  "signUpPassword": "1234567890",
-  "FirstName": "Peter",
-  "LastName": "G",
-  "Address": "444 rrtrtere St",
-  "City": "dcdc",
-  "State": "RR",
-  "Zip": "09210",
-  "phone": "21121",
-  "ssn": "23232"
+
+  "validUser": {
+    "signUpPassword": "1234567890",
+    "FirstName": "Peter",
+    "LastName": "G",
+    "Address": "444 rrtrtere St",
+    "City": "dcdc",
+    "State": "RR",
+    "Zip": "09210",
+    "phone": "21121",
+    "ssn": "23232"
+  }
 }
