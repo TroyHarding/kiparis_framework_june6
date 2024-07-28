@@ -34,9 +34,11 @@ When("I click on Samsung Phone", () => {
 
 // Then("I check samsung product description", () => {
 //   cy.fixture("myronDemoblaze.json").then((data) => {
-//     cy.get('#more-information > p').should("eq", data.productDescription.nokia)
+//     cy.get('#more-information > p').should("have.text", data.productDescription.samsung)
 //   });
 // });
+
+
 
 
 let productPage = new myroDemoProduct_Po()
@@ -50,6 +52,12 @@ Then("the product should be added to the cart", () => {
     expect(message).to.equal("Product added");
   });
 });
+
+// Then("I check samsung product description", () => {
+//   cy.fixture("myronDemoblaze.json").then((data) => {
+//     cy.get('#more-information > p').should("have.text", data.productDescription["samsung"])
+//   });
+// });
 
 
 When("I click on the Cart button", () => {
