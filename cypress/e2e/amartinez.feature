@@ -14,9 +14,6 @@ Feature: Demoblaze site
         When I click "Sign Up" tab
         Then sign up modal opens up
 
-
-
-
     @demo2 @alex2
     Scenario: Home page Products verification for phone, laptop and tablet 
         Given I navigate to the Demoblaze homepage
@@ -25,10 +22,6 @@ Feature: Demoblaze site
         Then I verify products display in the Next page
         When I click Previous page Button
         Then I verify products display in the Home page
-
-
-        
-
 
     # @demo2.1 @alex2.1
     # Scenario: Home page Products verification
@@ -59,15 +52,4 @@ Feature: Demoblaze site
         When  I click the Place Order Button
         When I fill out the Place Order Field
         Then I should see an order confirmation
-
-
-# @demo5 @alex5
-# Scenario: Valid Login
-
-# Given I navigate to the Demoblaze homepage and login with valid credentials
-# Then Welcome User message is displayed
-
-
-
-
 
