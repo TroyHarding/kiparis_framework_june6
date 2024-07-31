@@ -253,7 +253,7 @@ verifyNewAccountType(){
   
 
 
-}
+
   
   export default parabank_PO;
   
