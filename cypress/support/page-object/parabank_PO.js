@@ -25,7 +25,7 @@ class parabankLoginPage {
     this.registrationCompleted = ".title";
     this.loginUsername = "input[name='username']";
     this.loginPassword = "input[name='password']";
-    this.loginButton = "a[value='Log In' type='submit']";
+    this.loginButton = "input[value='Log In']";
   }
 
   //Functions
@@ -71,6 +71,10 @@ class parabankLoginPage {
       cy.get(this.loginPassword).type(data.password);
       cy.get(this.loginButton).click();
     });
+  }
+
+  loginIsSuccessfull() {
+    cy.get("h1").contains("Accounts Overview");
   }
 }
 

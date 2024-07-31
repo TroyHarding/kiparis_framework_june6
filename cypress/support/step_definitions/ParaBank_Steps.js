@@ -29,6 +29,13 @@ Then(`I verify user registered successfully`, () => {
 });
 /////////////////////////////////////////////////////
 //Steps for scenario 2
-Given(`I enter the valid username and password`, () => {
+When(`I enter the valid username and password and click login`, () => {
   parabank.enterValidLoginCredentials();
 });
+
+Then(
+  `I verify that the user is able to login successfully in the ParaBank application`,
+  () => {
+    parabank.loginIsSuccessfull();
+  }
+);
