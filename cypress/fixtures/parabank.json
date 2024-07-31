@@ -1,13 +1,18 @@
 {
-    
-    "username": "GGG",
-    "password": "p@ssword"
+  "username": "GGG",
+  "password": "p@ssword",
+  "baseUrl": "https://parabank.parasoft.com/parabank/index.htm",
 
-    
-
-
-
-
+  "signUpInfo": {
+    "firstName": "Mike",
+    "lastName": "Smith",
+    "address": "555 Washington st",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "90777",
+    "phone": "3129008000",
+    "ssn": "4567891010",
+    "password": "password123",
+    "confirmPassword": "password123"
+  }
 }
-
-
