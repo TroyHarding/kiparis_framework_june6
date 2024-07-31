@@ -4,15 +4,6 @@
   "password": "p@ssword",
 
   "validUser": {
-    "firstName": "Fox",
-    "lastName": "Mulder",
-    "address": "123 Adams street",
-    "city": "Phoenix",
-    "state": "Arizona",
-    "zip": "85000",
-    "phone": "1234567890",
-    "ssn": "123456789",
-    "password": "password123",
-    "confirmPassword": "password123"
+    "ssn": "123-45-6789"
   }
 }
