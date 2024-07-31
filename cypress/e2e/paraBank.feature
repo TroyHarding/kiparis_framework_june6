@@ -1,13 +1,13 @@
 @para
 Feature: User Registration and Account Management in ParaBank
 
-# @para-anatoly1
-#   Scenario: Automate User Registration process
-#     Given I open the parabank site
-#     When I click on the Register link
-#     When I add valid registration data
-#     When I click on the Register button
-#     Then I verify user registered successfully
+@para-anatoly1
+  Scenario: Automate User Registration process
+    Given I open the parabank site
+    When I click on the Register link
+    When I add valid registration data
+    When I click on the Register button
+    Then I verify user registered successfully
 
 @para-anatoly2
   Scenario: Automate that user is able to login successfully
