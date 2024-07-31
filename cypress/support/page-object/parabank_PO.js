@@ -24,13 +24,8 @@ constructor() {
   this.registerSuccess = ".title";
   // "#rightPanel"; 
 
-
-
-
   //homepage links
    this.solutions= ".Solutions";
-
-
 
   //login
   this.username = "input[name='username']";
@@ -75,9 +70,6 @@ constructor() {
 
 }
 
-
-
-
 //Functions 
 
 openParaBank() {
@@ -97,7 +89,6 @@ inputRegisterInfo() {
     const randomNumber = Math.floor(Math.random() * 10000);
     let username1 = data.user1.registrationUsername + randomNumber; 
 
-
    cy.get(this.firstName).type(data.user1.firstName);
    cy.get(this.lastName).type(data.user1.lastName);
    cy.get(this.addressStreet).type(data.user1.addressStreet);
@@ -114,8 +105,6 @@ inputRegisterInfo() {
 
 }
 
- 
-
   // cy.get(this.firstName).type("Alex");
   // cy.get(this.lastName).type("Martini");
   // cy.get(this.addressStreet).type("101 Main");
@@ -128,8 +117,6 @@ inputRegisterInfo() {
   // cy.get(this.registrationPassword).type("password1");
   // cy.get(this.confirmPassword).type("password1");
 
-
-
 registerButtonClick(){
   cy.get(this.registerButton).click();
 }
@@ -137,7 +124,6 @@ registerButtonClick(){
 verifyRegistration(){
   cy.get(this.registerSuccess).should("contain.text", "Welcome"); 
 }
-
 
 validUsername(uname){
   cy.get(this.username).type(uname); 
@@ -166,10 +152,12 @@ verifyNewAccountType(){
   
     //Methods
   navigateHomePagePara() {
+
     cy.fixture("parabank.json").then((data) => {
       cy.visit(data.baseUrl);
     });
   }
+
   clickOnRegLink() {
     cy.get(this.regLink).click();
   }
@@ -251,9 +239,6 @@ verifyNewAccountType(){
   }
 }
   
-
-
 }
   
   export default parabank_PO;
-  

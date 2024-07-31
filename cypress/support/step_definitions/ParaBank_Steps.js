@@ -95,11 +95,13 @@ Then(`I enter the valid password`, () => {
 Then(`I click the Login button`, () => {
   const clickOnLoginButton = new parabank_PO();
   clickOnLoginButton.clickOnLoginButton();
+
 });
 
 Then(
   `I verify that the user is able to login successfully in the ParaBank application`,
   () => {
+
     const verifyUserlogin = new parabank_PO();
     verifyUserlogin.verifyUserLogin();
   }
@@ -129,4 +131,3 @@ Then(`I verify that the Account Overview page is displayed`, () => {
   const verifyAcc = new parabank_PO();
   verifyAcc.verifyAccOverwiev();
 });
-

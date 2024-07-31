@@ -61,7 +61,6 @@ Feature: User Registration and Account Management in ParaBank
     Then I click to my account Overview page
     Then I verify that the Account Overview page is displayed
 
-
 #   Scenario: Automate that Overview page is displayed
 #     Given I open the parabank Site
 #     When I enter the valid username "amart"
@@ -80,4 +79,3 @@ Feature: User Registration and Account Management in ParaBank
 #     And I click on Open New Account
 #     And I click on Accounts Overview
 #     Then I verify that the user is able to view the Account Overview page
-
