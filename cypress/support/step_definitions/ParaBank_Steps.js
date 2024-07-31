@@ -1,85 +1,132 @@
 /// <reference types="cypress" />
 import {
-  Given,
-  When,
-  Then,
-  And,
-} from "@badeball/cypress-cucumber-preprocessor";
-import "cypress-iframe";
-import parabank_PO from "../page-object/parabank_PO";
+    Given,
+    When,
+    Then,
+  } from "@badeball/cypress-cucumber-preprocessor";
+  import "cypress-iframe";
+  
 
-const parabank = new parabank_PO();
+  import parabank_PO from "../page-object/parabank_PO";
+  const parabank = new parabank_PO();
 
-//USING CUSTOM Method
-Given("I open the parabank site", () => {
 
-  parabank.visitHomePage();
-});
 
-When("I click on the Register link", () => {
-  parabank.registerLink();
-});
-
-When("I add valid registration data", () => {
-  parabank.validRegistrationData();
-});
-
-//Using just SELECTORS
-When("I click on the Register button", () => {
-  cy.get('input[value="Register"]').click();
-});
-
-Then("I verify user registered successfully", () => {
-  cy.contains("Your account was created successfully").should("be.visible");
-});
-
-When("I enter the valid username", () => {
-  cy.fixture("parabank.json").then((data) => {
-    cy.get(parabank.loginPanel.usernameInput).type(data.username);
+  Given('I open the parabank Site', () => {
+    parabank.openParaBank();
   });
-});
 
-When("I enter the valid password", () => {
-  cy.fixture("parabank.json").then((data) => {
-    cy.get(parabank.loginPanel.passwordInput).type(data.password);
+  When('I click on the Register link', () => {
+    parabank.registerLinkClick();
   });
+
+  When('I add valid registration data', () => { 
+    parabank.inputRegisterInfo(); 
+  });
+
+  When('I click on the Register button', () => {
+    parabank.registerButtonClick(); 
+  });
+
+  Then('I verify user registered successfully', () => { 
+    parabank.verifyRegistration();
+  });
+
+  When('I enter the valid username {string}', (uname) => {
+    parabank.validUsername(uname); 
+  });
+
+  
+  When('I enter the valid password {string}', (pswrd) => {
+    parabank.validPassword(pswrd); 
+  });
+
+  When('I click the Login button', () => {
+    parabank.clickLoginButton();
+  });
+
+  Then('I verify that the user is able to login successfully in the ParaBank application', () => {
+    parabank.accountVerification();
+  });
+
+  When('I click on Open New Account', () => {
+    parabank.openNewAccount();
+  });
+
+  Then('I verify that the Account Overview page is displayed', () => {
+    parabank.verifyNewAccountType();
+  });
+
+Given(`I open the parabank site`, () => {
+  const navHomePage = new parabank_PO();
+  navHomePage.navigateHomePagePara();
 });
 
-When("I click the Login button", () => {
-  cy.get(parabank.loginPanel.loginButton).click();
+When(`I click on the Register link`, () => {
+  const openRegLink = new parabank_PO();
+  openRegLink.clickOnRegLink();
 });
 
-Then("I verify user is able to loggin successfully", () => {
-  cy.get(parabank.userNameDisplay).should("be.visible");
+When(`I add valid registration data`, () => {
+  const validReg = new parabank_PO();
+  validReg.validRegDataFill();
 });
 
-//INCOMPLETE
-When("I navigate to my account page", () => {
-  // Navigate to account page
-  cy.contains("Accounts Overview").click();
+When(`I click on the Register button`, () => {
+  const clickOnRegButton = new parabank_PO();
+  clickOnRegButton.clickOnRegButton();
 });
 
-When("I click on Open New Account", () => {
-  cy.contains("Open New Account").click();
+Then(`I verify user registered successfully`, () => {
+  const verifyUserRegister = new parabank_PO();
+  verifyUserRegister.verifyUserRegister();
+});
+
+When(`I enter the valid username`, () => {
+  const enterValidUserName = new parabank_PO();
+  enterValidUserName.enterValidUserName();
+});
+
+Then(`I enter the valid password`, () => {
+  const enterValidPass = new parabank_PO();
+  enterValidPass.enterValidPass();
+});
+
+Then(`I click the Login button`, () => {
+  const clickOnLoginButton = new parabank_PO();
+  clickOnLoginButton.clickOnLoginButton();
 });
 
 Then(
-  'I verify that the field "What type of Account would you like to open?" is displayed',
+  `I verify that the user is able to login successfully in the ParaBank application`,
   () => {
-    cy.contains("What type of Account would you like to open?").should(
-      "be.visible"
-    );
+    const verifyUserlogin = new parabank_PO();
+    verifyUserlogin.verifyUserLogin();
   }
 );
 
-Then("I verify that the Account Overview page is displayed", () => {
-  cy.contains("Account Overview").should("be.visible");
+Then(`I navigate to my account page`, () => {
+  const verifyAccountPage = new parabank_PO();
+  verifyAccountPage.verifyAccountPage();
 });
 
-When("I click on Accounts Overview", () => {
-  cy.contains("Accounts Overview").click();
+Then(`I click on Open New Account`, () => {
+  const clickOnOpenNewAcc = new parabank_PO();
+  clickOnOpenNewAcc.clickOnOpenNewAcc();
 });
 
-Then("I verify that the user is able to view the Account Overview page", () => {
-  cy.contains("Account Overview").should("be.visible");
+Then(`I verify field What type of Account would you like to open?`, () => {
+  const verifyAcc = new parabank_PO();
+  verifyAcc.verifyAcc();
 });
+
+Then(`I click to my account Overview page`, () => {
+  const clickOnAccOverwiev = new parabank_PO();
+  clickOnAccOverwiev.clickOnAccOverwiev();
+});
+
+Then(`I verify that the Account Overview page is displayed`, () => {
+  const verifyAcc = new parabank_PO();
+  verifyAcc.verifyAccOverwiev();
+});
+

@@ -1,20 +1,32 @@
 {
+
   "baseUrl": "https://parabank.parasoft.com/parabank/index.htm",
   "username": "GGG",
   "password": "p@ssword",
 
   "validUser": {
-    "firstName": "John",
-    "lastName": "Doe",
-    "address": "123 Elm Street",
-    "city": "Anytown",
-    "state": "CA",
-    "zipCode": "12345",
-    "phoneNumber": "123-456-7890",
-    "ssn": "123-45-6789",
-    "newUsername": "johndoe",
-    "newPassword": "password",
-    "username": "existing_user",
-    "password": "existing_password"
+    "signUpPassword": "1234567890",
+    "FirstName": "Peter",
+    "LastName": "G",
+    "Address": "444 rrtrtere St",
+    "City": "dcdc",
+    "State": "RR",
+    "Zip": "09210",
+    "phone": "21121",
+    "ssn": "23232"
+  },
+
+  "user1": {
+    "firstName": "Alex",
+    "lastName": "Martinez",
+    "addressStreet": "101 Main",
+    "addressCity": "Austin",
+    "addressState": "TX",
+    "addressZip": "78502",
+    "phoneNumber": "502-502-5502",
+    "customerSSN": "555-44-3333",
+    "registrationUsername": "amartini",
+    "registrationPassword": "password1",
+    "confirmPassword": "password1"
   }
 }
