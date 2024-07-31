@@ -4,6 +4,28 @@
   "password": "p@ssword",
 
   "validUser": {
-    "ssn": "123-45-6789"
+    "signUpPassword": "1234567890",
+    "FirstName": "Peter",
+    "LastName": "G",
+    "Address": "444 rrtrtere St",
+    "City": "dcdc",
+    "State": "RR",
+    "Zip": "09210",
+    "phone": "21121",
+    "ssn": "23232"
+  },
+
+  "user1": {
+    "firstName": "Alex",
+    "lastName": "Martinez",
+    "addressStreet": "101 Main",
+    "addressCity": "Austin",
+    "addressState": "TX",
+    "addressZip": "78502",
+    "phoneNumber": "502-502-5502",
+    "customerSSN": "555-44-3333",
+    "registrationUsername": "amartini",
+    "registrationPassword": "password1",
+    "confirmPassword": "password1"
   }
 }

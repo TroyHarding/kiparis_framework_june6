@@ -1,87 +1,133 @@
 /// <reference types="cypress" />
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import "cypress-iframe";
+import {
+    Given,
+    When,
+    Then,
+  } from "@badeball/cypress-cucumber-preprocessor";
+  import "cypress-iframe";
+  
 
-import parabank_PO from "../page-object/parabank_PO";
+  import parabank_PO from "../page-object/parabank_PO";
+  const parabank = new parabank_PO();
 
-const parabank = new parabank_PO();
 
-//Scenario: Automate User Registration process
+
+  Given('I open the parabank Site', () => {
+    parabank.openParaBank();
+  });
+
+  When('I click on the Register link', () => {
+    parabank.registerLinkClick();
+  });
+
+  When('I add valid registration data', () => { 
+    parabank.inputRegisterInfo(); 
+  });
+
+  When('I click on the Register button', () => {
+    parabank.registerButtonClick(); 
+  });
+
+  Then('I verify user registered successfully', () => { 
+    parabank.verifyRegistration();
+  });
+
+  When('I enter the valid username {string}', (uname) => {
+    parabank.validUsername(uname); 
+  });
+
+  
+  When('I enter the valid password {string}', (pswrd) => {
+    parabank.validPassword(pswrd); 
+  });
+
+  When('I click the Login button', () => {
+    parabank.clickLoginButton();
+  });
+
+  Then('I verify that the user is able to login successfully in the ParaBank application', () => {
+    parabank.accountVerification();
+  });
+
+  When('I click on Open New Account', () => {
+    parabank.openNewAccount();
+  });
+
+  Then('I verify that the Account Overview page is displayed', () => {
+    parabank.verifyNewAccountType();
+  });
 
 Given(`I open the parabank site`, () => {
-  parabank.openParaBank();
+  const navHomePage = new parabank_PO();
+  navHomePage.navigateHomePagePara();
 });
 
 When(`I click on the Register link`, () => {
-  parabank.clickRegisterLink();
+  const openRegLink = new parabank_PO();
+  openRegLink.clickOnRegLink();
 });
 
 When(`I add valid registration data`, () => {
-  parabank.sigUpValidData();
+  const validReg = new parabank_PO();
+  validReg.validRegDataFill();
 });
 
 When(`I click on the Register button`, () => {
-  parabank.clickRegisterButton();
+  const clickOnRegButton = new parabank_PO();
+  clickOnRegButton.clickOnRegButton();
 });
 
 Then(`I verify user registered successfully`, () => {
-  parabank.confirmRegistration();
+  const verifyUserRegister = new parabank_PO();
+  verifyUserRegister.verifyUserRegister();
 });
-
-//Scenario: Automate User Registration process
 
 When(`I enter the valid username`, () => {
-  parabank.enterCustomerUsername();
+  const enterValidUserName = new parabank_PO();
+  enterValidUserName.enterValidUserName();
 });
 
-When(`I enter the valid password`, () => {
-  parabank.enterCustomerPassword();
+Then(`I enter the valid password`, () => {
+  const enterValidPass = new parabank_PO();
+  enterValidPass.enterValidPass();
 });
 
-When(`I click the Login button`, () => {
-  parabank.clickLoginButton();
+Then(`I click the Login button`, () => {
+  const clickOnLoginButton = new parabank_PO();
+  clickOnLoginButton.clickOnLoginButton();
+
 });
 
 Then(
   `I verify that the user is able to login successfully in the ParaBank application`,
   () => {
-    parabank.loginSuccess();
+
+    const verifyUserlogin = new parabank_PO();
+    verifyUserlogin.verifyUserLogin();
   }
 );
 
-//Scenario: Automate that User is able to Open the Account successfully
-
-When(`I navigate to my account page`, () => {
-  parabank.navigateToAccountPage();
+Then(`I navigate to my account page`, () => {
+  const verifyAccountPage = new parabank_PO();
+  verifyAccountPage.verifyAccountPage();
 });
 
-When(`I click on Open New Account link`, () => {
-  parabank.navigateToOpenNewAccount();
+Then(`I click on Open New Account`, () => {
+  const clickOnOpenNewAcc = new parabank_PO();
+  clickOnOpenNewAcc.clickOnOpenNewAcc();
 });
 
-Then(`I verify that the field {string} is displayed`, (field) => {
-  parabank.openNewAccountField(field);});
+Then(`I verify field What type of Account would you like to open?`, () => {
+  const verifyAcc = new parabank_PO();
+  verifyAcc.verifyAcc();
+});
 
-//Scenario: Automate that Overview page is displayed
-
-When(`I click on Open New Account button`, () => {
-  parabank.openCheckingAccount();
+Then(`I click to my account Overview page`, () => {
+  const clickOnAccOverwiev = new parabank_PO();
+  clickOnAccOverwiev.clickOnAccOverwiev();
 });
 
 Then(`I verify that the Account Overview page is displayed`, () => {
-  parabank.navigateToAccountPage();
-})
-
-//Scenario: Automate that User is able to view the Account Overview page
-
-When(`I click on Open New Account`, () => {
-  
-});
-
-When(`I click on Accounts Overview`, () => {
-  
-});
-
-Then(`I verify that the user is able to view the Account Overview page`, () => {
-  
+  const verifyAcc = new parabank_PO();
+  verifyAcc.verifyAccOverwiev();
 });
