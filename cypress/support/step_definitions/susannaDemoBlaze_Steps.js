@@ -1,86 +1,77 @@
 /// <reference types="cypress" />
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import "cypress-iframe";
-import susannaDemoBlaze_PO from "../page-object/susannaDemoBlaze_PO";
+import susannaDemoBlaze_HomePage_PO from "../page-object/susannaDemoBlaze_HomePage_PO";
+import susannaDemoBlaze_ProductPage_PO from "../page-object/susannaDemoBlaze_ProductPage_PO";
 
-const demo = new susannaDemoBlaze_PO();
+const home = new susannaDemoBlaze_HomePage_PO();
+const product = new susannaDemoBlaze_ProductPage_PO();
 
 // Sign Up
 Given(`I navigate to the Demoblaze homepage`, () => {
-  cy.visit("https://demoblaze.com/");
-  cy.wait(5000);
+  home.visitDemoBlazeSite();
 });
 
 When(`I click on the Sign Up button`, () => {
-  cy.get("#signin2").click();
-  cy.get("#signInModalLabel").should("be.visible");
-  cy.wait(5000);
+  home.clickSignUpButton();
 });
 
 When(
   `I enter username {string} and password {string}`,
   (username, password) => {
-    cy.get("#sign-username").type(username);
-    cy.get("#sign-password").type(password);
-    cy.wait(5000);
+    home.userSignUp();
   }
 );
 
 When(`I click on Sign Up button`, () => {
-  cy.get("button[onclick='register()']").click();
-  cy.wait(5000);
+  home.clickSignUpRegisterButton();
 });
 
 Then("I should see a registration confirmation", () => {
-  cy.on("window:alert", (message) => {
-    expect(message).to.equal("Sign up successful.");
-  });
+  home.registrationConfirmation();
 });
 
 // Login
 
 When(`I click on the Log In button`, () => {
-  cy.get("#login2").click();
-  cy.get("div[id='logInModal'] div[class='modal-header']").contains("Log in");
-  cy.wait(5000);
+  home.clickLoginButton();
 });
 
 When(
   `I enter login username {string} and login password {string}`,
   (username2, password2) => {
-    cy.get("#loginusername").type(username2);
-    cy.get("#loginpassword").type(password2);
-    cy.wait(5000);
+    home.enterLoginInfo();
   }
 );
 
 When(`I click Log In in the modal`, () => {
-  cy.get("button[onclick='logIn()']").click();
-  cy.wait(5000);
+  home.clickLoginRegisterButton();
 });
 
 Then(`I verify should be logged in`, () => {
-  cy.get("#nameofuser").should("be.visible");
-  cy.wait(5000);
+  home.verifyLoginSuccess();
 });
 
-When(`I click a product {string}`, (product) => {
-  cy.get("h4 > [href$='prod.html?idp_=1']").click();
-  cy.get("#tbodyid").contains("Samsung galaxy s6");
-  cy.wait(5000);
+// Click product and product page
+
+When(`I click on a product {string}`, (product) => {
+  home.clickProduct();
 });
 
 // Add Product to Cart
 
+
+Then("Verify description shows description for {string}", (product) => {
+  //   const verifyProductDescription = new Practice_ProdPage_PO();
+    product.verifyProductDescription(product);
+  });
+
 When(`I add the product to the cart`, () => {
-  cy.get(".btn.btn-success.btn-lg").click();
-  cy.wait(5000);
+  product.addToCart();
 });
 
 Then("the product should be added to the cart", () => {
-  cy.on("window:alert", (message) => {
-    expect(message).to.equal("Product added");
-  });
+  product.verifyProductAddedToCart();
 });
 
 // Place an Order

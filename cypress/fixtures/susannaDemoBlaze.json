@@ -1,7 +1,9 @@
 {
     "baseUrl": "https://www.demoblaze.com/",
-    "username": "billyjoebob",
+    "username": "susanan333",
     "password": "password1",
+    "username2": "billyjoebob",
+    "password2": "password1",
 
     "productNames": {
       "samsung6": "Samsung galaxy s6",
