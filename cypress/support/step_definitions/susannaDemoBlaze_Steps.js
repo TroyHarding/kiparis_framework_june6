@@ -3,9 +3,11 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import "cypress-iframe";
 import susannaDemoBlaze_HomePage_PO from "../page-object/susannaDemoBlaze_HomePage_PO";
 import susannaDemoBlaze_ProductPage_PO from "../page-object/susannaDemoBlaze_ProductPage_PO";
+import susannaDemoBlaze_CartPage_PO from "../page-object/susannaDemoBlaze_CartPage_PO";
 
 const home = new susannaDemoBlaze_HomePage_PO();
 const product = new susannaDemoBlaze_ProductPage_PO();
+const cart = new susannaDemoBlaze_CartPage_PO();
 
 // Sign Up
 Given(`I navigate to the Demoblaze homepage`, () => {
@@ -77,31 +79,19 @@ Then("the product should be added to the cart", () => {
 // Place an Order
 
 When(`I click on the Cart button`, () => {
-  cy.get("#cartur").click();
-  cy.get("#tbodyid").contains("Samsung galaxy s6");
+  home.clickCartButton();
+  cart.cartPage();
   cy.wait(5000);
 });
 
 When(`I click the Place Order Button`, () => {
-  cy.get(".btn.btn-success").click();
-  cy.get("div[id='orderModal'] div[class='modal-header']").contains(
-    "Place order"
-  );
-  cy.wait(5000);
+  cart.clickPlaceOrderButton();
 });
 
 When("I fill out the Place Order Field", () => {
-  cy.get("#name").type("billyjoebob");
-  cy.get("#country").type("usa");
-  cy.get("#city").type("san francisco");
-  cy.get("#card").type("12345678910");
-  cy.get("#month").type("march");
-  cy.get("#year").type("2024");
-  cy.get("button[onclick='purchaseOrder()']").click();
-  cy.wait(5000);
+  cart.fillPlaceOrderField();
 });
 
 Then(`I should see an order confirmation`, () => {
-  cy.contains("Thank you for your purchase!").should("be.visible");
-  cy.wait(5000);
+  cart.orderConfirmation();
 });

@@ -78,12 +78,12 @@ class susannaDemoBlaze_HomePage_PO {
     cy.get(this.previousButton).click();
   }
 
-  clickProduct(product) {
-    cy.fixture("susannaDemoBlaze.json").then((data) => {
-      cy.contains(this.cardtitle, data.productNames[product]).click();
-      cy.wait(10000);
-    });
-  }
+  // clickProduct(product) {
+  //   cy.fixture("susannaDemoBlaze.json").then((data) => {
+  //     cy.contains(this.cardtitle, data.productNames[product]).click();
+  //     cy.wait(10000);
+  //   });
+  // }
 
   // clickProduct(product) {
   //   // cy.fixture("susannaDemoBlaze.json").then((data) => {
@@ -92,10 +92,10 @@ class susannaDemoBlaze_HomePage_PO {
   //     cy.wait(5000);
   //   }
 
-    // clickProduct(product) {
-    //   cy.contains(this.cardtitle, product).click();
-    //   cy.wait(1000);
-    // }
+    clickProduct(product) {
+      cy.contains(this.cardtitle, product).click();
+      cy.wait(5000);
+    }
   
 
 

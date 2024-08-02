@@ -41,12 +41,12 @@ Feature: Demoblaze site
     # | Nokia lumia 1520  | nokia  |
     # | Nexus 6           | nexus |
 
-    # @demo4 @susanna
-    # Scenario: Place an Order
-    #     Given I navigate to the Demoblaze homepage
-    #     When I click a product "Samsung galaxy s6"
-    #     When I add the product to the cart
-    #     When I click on the Cart button
-    #     When  I click the Place Order Button
-    #     When I fill out the Place Order Field
-    #     Then I should see an order confirmation
+    @demo4 @susanna
+    Scenario: Place an Order
+        Given I navigate to the Demoblaze homepage
+        # When I click on a product "Samsung galaxy s6"
+        # When I add the product to the cart
+        When I click on the Cart button
+        When  I click the Place Order Button
+        When I fill out the Place Order Field
+        Then I should see an order confirmation

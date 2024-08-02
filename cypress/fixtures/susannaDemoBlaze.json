@@ -5,6 +5,13 @@
     "username2": "billyjoebob",
     "password2": "password1",
 
+    "name": "susanna",
+    "country": "usa",
+    "city": "san francisco",
+    "card": "12345678910",
+    "month": "march",
+    "year": "2024",
+
     "productNames": {
       "samsung6": "Samsung galaxy s6",
       "nokia": "Nokia lumia 1520",
