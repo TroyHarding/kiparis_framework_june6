@@ -2,6 +2,8 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import "cypress-iframe";
 
+
+
 Given(`I navigate to the Demoblaze homepage`, () => {
   //   // Fill out the code
   cy.visit("https://www.demoblaze.com/index.html");

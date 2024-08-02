@@ -1,13 +1,23 @@
 {
-    
-    "username": "GGG",
-    "password": "p@ssword"
+    "baseUrl": "https://parabank.parasoft.com/parabank/register.htm",
+    "username1": "GGG",
+    "password1": "p@ssword",
 
-    
+    "validUser": {
+        "FirstName": "testing",
+        "LastName": "ton",
+        "Address": "654 target dr",
+        "City": "suncity",
+        "State": "Newyork",
+        "ZipCode":"95017",
+        "Phone": 6505900175,
+        "SSN": 789456123,
+        "UserName": "iamtester",
+        "UserPassword": "iamtester"
+        
 
-
-
-
+    }
 }
+
 
 
