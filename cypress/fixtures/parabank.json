@@ -1,13 +1,16 @@
 {
-    
-    "username": "GGG",
-    "password": "p@ssword"
-
-    
-
-
-
-
+  "parabankUrl": "https://parabank.parasoft.com/parabank/index.htm",
+  "registerUrl": "https://parabank.parasoft.com/parabank/register.htm",
+  "username": "susanna",
+  "password": "p@ssword",
+  "confirm": "p@ssword",
+  "firstName": "Susanna",
+  "lastName": "Chang",
+  "address": "123 Main Street",
+  "city": "San Francisco",
+  "state": "CA",
+  "zipCode": "94721",
+  "phone": "4157423417",
+  "SSN": "521923412",
+  "accountUrl": "https://parabank.parasoft.com/parabank/overview.htm"
 }
-
-
