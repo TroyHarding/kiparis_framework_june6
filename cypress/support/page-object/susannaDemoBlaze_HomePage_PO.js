@@ -25,8 +25,6 @@ class susannaDemoBlaze_HomePage_PO {
 
     //The products
     this.cardtitle = ".card-title";
-    // this.cardtitle = "h4 > [href$='prod.html?idp_=1']";
-  //  this.cardtitle = "#tbodyid";
 
     //SignUp page
     this.signUpPage = "#signInModalLabel";
@@ -78,7 +76,10 @@ class susannaDemoBlaze_HomePage_PO {
     cy.get(this.previousButton).click();
   }
 
-  // clickProduct(product) {
+  clickProduct(product) {
+    cy.get("h4 > [href$='prod.html?idp_=1']").click();
+    cy.wait(5000);
+  } // clickProduct(product) {
   //   cy.fixture("susannaDemoBlaze.json").then((data) => {
   //     cy.contains(this.cardtitle, data.productNames[product]).click();
   //     cy.wait(10000);
@@ -86,20 +87,9 @@ class susannaDemoBlaze_HomePage_PO {
   // }
 
   // clickProduct(product) {
-  //   // cy.fixture("susannaDemoBlaze.json").then((data) => {
-  //   //   cy.contains(this.cardtitle, data.productNames[product]).click();
-  //     cy.contains(this.cardtitle, product).click();
-  //     cy.wait(5000);
-  //   }
-
-    clickProduct(product) {
-      cy.contains(this.cardtitle, product).click();
-      cy.wait(5000);
-    }
-  
-
-
-
+  //   cy.contains(this.cardtitle, product).click();
+  //   cy.wait(5000);
+  // }
 
   visitDemoBlazeSite() {
     cy.fixture("susannaDemoBlaze.json").then((data) => {

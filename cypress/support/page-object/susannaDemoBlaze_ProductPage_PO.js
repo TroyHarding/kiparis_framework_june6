@@ -12,28 +12,14 @@ class susannaDemoBlaze_ProductPage_PO {
 
   //Add to cart Methods
 
-//   clickProduct(product) {
-//     cy.get(this.samsung6).click();
-//     cy.get(this.productPage).contains(
-//     cy.fixture(susannaDemoBlaze.json).then((data) => {
-//       cy.get(this.productNames).contains(data.productNames[samsung6]);
-//       cy.get(this.productPrices).contains(data.productPrices[samsung6]);
-//       cy.get(this.productDescriptions).contains(
-//         data.productDescriptions[samsung6]
-//       );
-//     }));
-//     cy.wait(5000);
-//   }
-
-verifyProductDescription(product) {
-    cy.fixture("Practice_HomePage_PO_fixture.json").then((data) => {
-      // cy.get(".name")
-      //   .find(data.productNames["samsung"])
-      //   .should("eq", data.productNames["samsung"]);
-      cy.get("#tbodyid>.name").should("have.text", data.productNames[product]);
+  verifyProductDescription(product) {
+    cy.fixture("susannaDemoBlaze.json").then((data) => {
+      cy.get(".name")
+        .find(data.productNames["samsung6"])
+        .should("eq", data.productNames["samsung6"]);
+      // cy.get(this.).should("have.text", data.productDescriptions[samsung6]);
     });
   }
-
 
   addToCart() {
     cy.get(this.addToCartButton).click();

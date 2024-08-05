@@ -62,11 +62,9 @@ When(`I click on a product {string}`, (product) => {
 
 // Add Product to Cart
 
-
 Then("Verify description shows description for {string}", (product) => {
-  //   const verifyProductDescription = new Practice_ProdPage_PO();
-    product.verifyProductDescription(product);
-  });
+  product.verifyProductDescription(product);
+});
 
 When(`I add the product to the cart`, () => {
   product.addToCart();
