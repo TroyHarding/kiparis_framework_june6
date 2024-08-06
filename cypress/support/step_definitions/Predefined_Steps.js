@@ -6,6 +6,11 @@
 //   And,
 // } from "@badeball/cypress-cucumber-preprocessor";
 // import "cypress-iframe";
+
+// Given(`I open url {string}`, (url) => {
+//   cy.visit("https://www.demoblaze.com/index.html");
+// });
+=======
 // import demo_home_PO from "../page-object/NatashaDemo_Home_PO";
 
 // // Given(`I open url {string}`, (url) => {
@@ -13,6 +18,7 @@
 // //   const home = new demo_home_PO();
 // //   home.clickContact();
 // // });
+
 
 // Given(`I resize window to {int} and {int}"`, (width, height) => {
 //   cy.viewport(width, height);
@@ -58,11 +64,19 @@
 //   `I type {string} into element with selector {string}`,
 //   (text, selector) => {
 //     cy.get(selector).type(text);
+
+//     cy.wait(2 * 1000);
+
+
 //   }
 // );
 
 // //Click
+
+// When(`I click on element with selector {login}`, (selector) => {
+
 // When(`I click on element with selector {string}`, (selector) => {
+
 //   cy.get(selector).click();
 // });
 
@@ -102,6 +116,17 @@
 //     cy.iframe(ifrmae).find(selector).should("eq", text);
 //   }
 // );
+
+
+// Then("the product should be added to the cart", () => {      // the www.demoblaze.com says Product added to the cart doesn't appear in cypress
+//     cy.on("window:alert", (message) => {
+//       expect(message).to.equal("Product added");
+//     })
+//     });
+    
+// Then(`I swith to default content`, () => {});
+
+
 
 // Then(`I swith to default content`, () => {});
 
