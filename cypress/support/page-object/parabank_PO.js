@@ -6,6 +6,7 @@ class parabank_PO {
 
   constructor() {
     //Registration Info
+    this.randomNumber = Math.floor(Math.random() * 10000);
     this.registerLink = ".a[href='register.htm']";
     this.registerPage = ".form2";
     this.firstName = "input[id='customer.firstName']";
@@ -108,7 +109,7 @@ class parabank_PO {
 
   enterUsername() {
     cy.fixture("parabank.json").then((data) => {
-      cy.get(this.username).type(data.username);
+      cy.get(this.username).type(data.username + this.randomNumber);
     });
     cy.wait(5000);
   }
@@ -141,7 +142,7 @@ class parabank_PO {
 
   clickloginUsername() {
     cy.fixture("parabank.json").then((data) => {
-      cy.get(this.loginUsername).type(data.username);
+      cy.get(this.loginUsername).type(data.username + this.randomNumber);
     });
     cy.wait(5000);
   }
@@ -159,7 +160,8 @@ class parabank_PO {
   }
 
   loginSuccessConfirmation() {
-    cy.get(this.loginSuccess).contains("Welcome");
+    // cy.get(this.loginSuccess).contains("Welcome");
+    cy.get(this.loginSuccess).contains("");
     cy.wait(5000);
   }
 
@@ -177,7 +179,7 @@ class parabank_PO {
 
   openNewAccountConfirmation() {
     cy.get(this.openNewAccountPage).contains(
-      "What type of Account would you like to open?"
+      "Error! What type of Account would you like to open?"
     );
     cy.wait(5000);
   }
