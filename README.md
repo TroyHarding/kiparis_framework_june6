@@ -1,7 +1,21 @@
+
+
+NEW UPDATE!!!!!
+
+alex trying to GIT 
+
+Hi hi hi hi
+
+Natasha Olson was here! 
+-----myroslav--------------
+
 --------------------
+
 
 Madhu K. is here! 
 Checking for another commit
+
+
 
 # Kiparis Framework
 
@@ -17,30 +31,36 @@ Windows 10 and above (64-bit only)
 
 # Downloads
 
-## Node.js 
+## Node.js
+
 https://nodejs.org/en/download
 
 ## VSCODE
+
 https://code.visualstudio.com/download
 
 # Plugins for VSCODE:
 
 ### Material Icons Theme:
+
 In Extentions tab search for "Material Icons Theme"
-or 
+or
 https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
 
 ### Prettier Code Formater
+
 In Extentions tab search for "Prettier Code formater" by prettier.io
-or 
+or
 https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
 ### Cucumber (Gherkin) Full Support
+
 In Extentions tab search for "Cucumber Gherkin" by Alexander Krechik
 or
 https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete
 
 ### Browsers:
+
 Please Download Chrome and Firefox Browser
 
 # Setup
